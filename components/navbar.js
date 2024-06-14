@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
-import styles from "./page.module.css";
+import styles from "../app/page.module.css";
 import { useRouter } from "next/navigation";
 export default function Navbar() {
   const router = useRouter();
   return (
     <>
-      <div className={styles.navbar}>
+      <header className={styles.navbar}>
         <p onClick={() => router.back()} style={{ cursor: "pointer" }}>
           Back
         </p>
@@ -14,7 +14,7 @@ export default function Navbar() {
         <Link href={"/meals"}>Meals</Link>
         <Link href={"/meals/shared"}>Meals Shared</Link>
         <Link href={"/community"}>Community</Link>
-      </div>
+      </header>
     </>
   );
 }
